@@ -2,13 +2,19 @@
   "name": "babycam",
   "version": "1.0.0",
   "description": "a simple Raspberry Pi BabyCam",
-  "main": "index.js",
+  "main": "server.js",
   "dependencies": {
-    "typescript": "^3.1.6"
+    "typescript": "^3.1.6",
+    "@types/express": "^4.16.0",
+    "express": "^4.16.4"
   },
   "devDependencies": {},
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "tsc": "tsc",
+    "update": "npm update",
+    "install": "npm install",
+    "start": "node build/server.js"
   },
   "repository": {
     "type": "git",
