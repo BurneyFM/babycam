@@ -14,7 +14,10 @@ This is a simple Raspberry Pi BabyCam.
 The BabyCam opens a https port and for this, you need both an SSL key and a certificate. You can generate self-signed versions of both using the following command in your terminal (Linux, MacOS) inside the ssl/ folder.
 
 ```
-openssl req -nodes -new -x509 -keyout babycam.key -out babycam.cert
+openssl req -x509 -out localhost.crt -keyout localhost.key \
+  -newkey rsa:2048 -nodes -sha256 \
+  -subj '/CN=localhost' -extensions EXT -config <( \
+   printf "[dn]\nCN=localhost\n[req]\ndistinguished_name = dn\n[EXT]\nsubjectAltName=DNS:localhost\nkeyUsage=digitalSignature\nextendedKeyUsage=serverAuth")
 ```
 
 ## Compiling the Code

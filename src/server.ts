@@ -1,21 +1,33 @@
 /* src/server.ts */
 
 import express from 'express';
+import { Request, Response } from 'express'
 import fs from 'fs';
 import https from 'https';
 import http from 'http';
-import {WelcomeController} from './controllers'; //TODO: remove
 
 const server: express.Application = express();
 const httpPort: number = 8080;
 const httpsPort: number = 8443;
 
 const sslCredentials = {
-    key: fs.readFileSync('../ssl/babycam.key', 'utf8'),
-    certificate: fs.readFileSync('../ssl/babycam.cert', 'utf8')
+    key: fs.readFileSync('../ssl/localhost.key', 'utf8'),
+    cert: fs.readFileSync('../ssl/localhost.cert', 'utf8')
 };
 
-server.use('/welcome', WelcomeController); //TODO: swap for index.html
+// ROUTES
+
+/*server.get('*', (req: Request, res:Response) => {
+    if (!req.secure) {
+        res.redirect(`https://${req.hostname}:${httpsPort}${req.originalUrl}`);
+    }
+});*/
+
+server.get('/', (req: Request, res: Response) => {
+    res.sendFile(__dirname + '/client/index.html');
+});
+
+// CREATE SERVER
 
 const httpServer = http.createServer(server);
 const httpsServer = https.createServer(sslCredentials, server);
@@ -25,7 +37,7 @@ httpServer.listen(httpPort, () => {
 }); 
 
 httpsServer.listen(httpsPort, () => {
-    console.log(`BabyCam (SSL) listening at https://localhost.${httpsPort}/`);
+    console.log(`BabyCam (SSL) listening at https://localhost:${httpsPort}/`);
 }); //TODO: won't work
 
 
