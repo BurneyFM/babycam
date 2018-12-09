@@ -1,6 +1,6 @@
-/node_modules
-/release
-/package-lock.json
-/build
-/ssl/babycam.key
-/ssl/babycam.cert
+node_modules
+package-lock.json
+build
+ssl/**
+utility
+playground

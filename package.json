@@ -6,16 +6,24 @@
   "dependencies": {
     "typescript": "^3.1.6",
     "@types/express": "^4.16.0",
-    "express": "^4.16.4"
+    "express": "^4.16.4",
+    "@types/socket.io": "^2.1.0",
+    "socket.io": "^2.2.0",
+    "raspivid-stream": "^0.2.1",
+    "@types/socket.io-client": "^1.4.32",
+    "socket.io-client": "^2.2.0",
+    "express-ws": "^4.0.0",
+    "@types/express-ws": "^3.0.0"
   },
   "devDependencies": {
     "nodemon": "^1.18.7"
   },
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "tsc": "tsc",
     "update": "npm update",
-    "install": "npm install"
+    "install": "npm install",
+    "connect": "open afp://babycam.local",
+    "build": "tsc && cp src/client/*.* build/client/",
+    "deploy": "tsc && cp src/client/*.html build/client/ && cp src/client/*.css build/client/ && cp src/client/*.js build/client/ && cp src/client/*.svg build/client/ && ./utility/send.sh"
   },
   "repository": {
     "type": "git",

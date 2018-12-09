@@ -1,10 +1,19 @@
-<!DOCTYPE <!DOCTYPE html>
+<!DOCTYPE html>
 <html>
 <head>
     <meta charset="utf-8" />
     <title>BabyCam</title>
+    <link rel="stylesheet" type="text/css" href="styles.css">
 </head>
 <body>
-    This is a simple BabyCam.
+    <div id="videoContainer"></div>
+    <script type="text/javascript" src="http-live-player.js"></script>
+    <script type="text/javascript" src="main.js"></script>
+    <div id="overlayContainer">
+        <div id="overlay">
+            <img src="error-icon.svg">
+            <span id="errorLabel">connection lost</span>
+        </div>
+    </div>
 </body>
 </html>
