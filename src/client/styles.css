@@ -42,3 +42,51 @@ body {
     font-weight: 100;
     margin-top: 20px;
 }
+
+#controlPanel {
+    position: absolute;
+    right: 0px;
+    width: 48px;
+    padding-top: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.button {
+    display: flex;
+    background: transparent;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    padding-bottom: 20px;
+    position: relative;
+}
+
+.menu {
+    position: absolute;
+    top: 0px;
+    right: 0px;
+    background-color: white;
+    color: rgba(0,0,0,0.87);
+    padding: 8px 0px;
+    display: none;
+    flex-direction: column;
+    margin-right: 8px;
+    border-radius: 4px;
+    box-shadow: 4px;
+}
+
+.menu-entry {
+    white-space: nowrap;
+    display: flex;
+    height: 32px;
+    align-items: center;
+    font-size: 15px;
+    padding: 0px 16px;
+}
+
+.menu-entry:hover {
+    background-color: rgba(0,0,0,0.12)
+}

@@ -1,6 +1,9 @@
 {
     "cSpell.words": [
-        "babycam"
+        "babycam",
+        "pktnum",
+        "unexport",
+        "wsavc"
     ],
     "npm-scripts.showStartNotification": false
 }

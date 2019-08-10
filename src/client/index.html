@@ -7,13 +7,36 @@
 </head>
 <body>
     <div id="videoContainer"></div>
-    <script type="text/javascript" src="http-live-player.js"></script>
-    <script type="text/javascript" src="main.js"></script>
+
     <div id="overlayContainer">
         <div id="overlay">
             <img src="error-icon.svg">
             <span id="errorLabel">connection lost</span>
         </div>
     </div>
+    <div id="controlPanel">
+        <button id="modeButton" class="button">
+            <img id="dayMode" src="day-mode.svg">
+            <img id="nightMode" style="display: none" src="night-mode.svg">
+        </button>
+        <button id="flipVideoButton" class="button">
+            <img src="flip-video.svg">
+        </button>
+        <button id="qualitySelectionButton" class="button">
+            <img src="quality.svg">
+            <div id="qualitySelectionMenu" class="menu">
+                <div id="lowQualityButton" class="menu-entry">
+                    480p
+                </div>
+                <div id="highQualityButton" class="menu-entry">
+                    1080p
+                </div>
+            </div>
+        </button>
+    </div>
+
+    <!-- scripts -->
+    <script type="text/javascript" src="http-live-player.js"></script>
+    <script type="text/javascript" src="main.js"></script>
 </body>
 </html>

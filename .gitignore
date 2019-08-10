@@ -1,6 +1,8 @@
 node_modules
 package-lock.json
 build
-ssl/**
+ssl
 utility
 playground
+.history
+.DS_Store

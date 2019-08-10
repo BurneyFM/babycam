@@ -1871,7 +1871,7 @@
     
       onInitWebGL: function () {
         try {
-          this.gl = this.canvas.getContext("experimental-webgl");
+          this.gl = this.canvas.getContext("webgl");
         } catch(e) {}
         
         if (!this.gl) {
