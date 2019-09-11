@@ -21,7 +21,7 @@ This is a simple Raspberry Pi BabyCam based on Node.js.
 ## Requirements
 
 * Raspberry Pi Zero W with OS installed on microSD card
-* Infrared Pi Camera with attached infrared LEDs and switchable IR-Cut filter (solder wire to pin 26 of the Raspberry Pi)
+* Infrared Pi Camera with attached infrared LEDs and switchable IR-Cut filter
 * Node.js
 * npm
 
@@ -67,6 +67,7 @@ The case folder contains STL files for both a back and a front of a camera case.
 * back side needs to be flipped for the opening to align with the USB power port
 * there is currently no mechanism for both sides to be fixed together
 * the hole radius for the screws is about 1mm too wide
+* files have low quality triangles
 
 ## License
 
