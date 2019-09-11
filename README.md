@@ -62,6 +62,12 @@ npm install && tsc
 
 The case folder contains STL files for both a back and a front of a camera case. Adjust the front element to your camera and IR LED, put it through your favorite slicer, and enjoy a neat case for your new camera.
 
+### Known STL issues
+
+* back side needs to be flipped for the opening to align with the USB power port
+* there is currently no mechanism for both sides to be fixed together
+* the hole radius for the screws is about 1mm too wide
+
 ## License
 
 This project is licensed under the MIT License - see the [LICENSE.md](LICENSE.md) file for details.
