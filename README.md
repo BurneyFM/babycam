@@ -9,6 +9,7 @@ This is a simple Raspberry Pi BabyCam based on Node.js.
 * camera is only active during streaming
 * disconnection warning
 * auto-reconnect after connection loss
+* STL files for 3D printing of a case
 
 ### TODO
 * login using passphrase
@@ -20,7 +21,7 @@ This is a simple Raspberry Pi BabyCam based on Node.js.
 ## Requirements
 
 * Raspberry Pi Zero W with OS installed on microSD card
-* Infrared Pi Camera with attached infrared LEDs and switchable IR-Cut filter
+* Infrared Pi Camera with attached infrared LEDs and switchable IR-Cut filter (solder wire to pin 26 of the Raspberry Pi)
 * Node.js
 * npm
 
@@ -56,6 +57,10 @@ Run the following commands inside of the project's root folder in your terminal 
 ```
 npm install && tsc
 ```
+
+## Camera Case
+
+The case folder contains STL files for both a back and a front of a camera case. Adjust the front element to your camera and IR LED, put it through your favorite slicer, and enjoy a neat case for your new camera.
 
 ## License
 
